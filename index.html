@@ -7,7 +7,11 @@ use-site-title: true
 
 <div class="posts-list">
   {% for post in paginator.posts %}
-  <article class="post-preview">
+    {% assign author = site.authors[post.author] %}
+    {% unless author %}
+    {% assign author = site.authors["company"] %}
+    {% endunless %}
+  <article class="post-preview">  
     <a href="{{ post.url | prepend: site.baseurl }}">
 	  <h2 class="post-title">{{ post.title }}</h2>
 
@@ -19,7 +23,7 @@ use-site-title: true
     </a>
 
     <p class="post-meta">
-      Posted on {{ post.date | date: "%B %-d, %Y" }}
+      Posted on {{ post.date | date: "%B %-d, %Y" }} by <a href="/authors">{{author.name}}</a>
     </p>
 
     <div class="post-entry-container">

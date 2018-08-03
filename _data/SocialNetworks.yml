@@ -93,5 +93,5 @@ twitch:
 
 yelp:
   name: "Yelp"
-  baseURL: "https://{{ site.author.yelp }}.yelp.com"
+  baseURL: "https://{{ site.authors.company.yelp }}.yelp.com"
   icon: "fa-yelp"

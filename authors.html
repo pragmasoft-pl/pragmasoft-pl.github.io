@@ -1,0 +1,31 @@
+---
+layout: page
+title: Blog authors
+subtitle: great people tend to cluster
+use-site-title: true
+---
+
+{% for author in site.authors %}
+  <h2>{{ author[1].name }}</h2>
+
+  <div class="author-details">
+    {% if author[1].gravatar %}
+    <img src="https://s.gravatar.com/avatar/{{ author[1].gravatar }}?s=100" atl="{{ author[1].name }}" />
+    {% else %}
+    <img src="/img/logo.png" atl="{{ author[1].name }}" />
+    {% endif %}
+    <div>{{ author[1].about }}</div>
+  </div>
+  
+  <ul>
+      {% if author[1].email %}
+      <li>Email: <a href="mailto:{{ author[1].email }}">{{ author[1].email }}</a></li>
+      {% endif %}
+      {% if author[1].twitter %}
+        <li>Twitter: <a href="">{{ author[1].twitter }}</a></li>
+      {% endif %}
+      {% if author[1].github %}
+        <li>GitHub: <a href="https://github.com/{{ author[1].github }}">{{ author[1].github }}</a></li>
+      {% endif %}
+  </ul>
+{% endfor %}

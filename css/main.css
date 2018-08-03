@@ -782,3 +782,19 @@ td.gutter {
   font-style: italic;
   font-size: 16px;
 }
+
+.author-details {
+  display: flex;
+  flex-direction: row;
+  margin: 10px 0;
+}
+.author-details > img {
+  border: 0;
+  margin: 0 10px;
+  width: 100px;
+  height: 100px;
+}
+.author-details > div {
+  padding: 0 10px;
+  border-left: 1px solid #777777;
+}

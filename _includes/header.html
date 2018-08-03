@@ -1,5 +1,10 @@
 <!-- TODO this file has become a mess, refactor it -->
 
+{% assign author = site.authors[page.author] %}
+{% unless author %}
+{% assign author = site.authors["company"] %}
+{% endunless %}
+
 {% if page.bigimg or page.title %}
 
 {% if page.bigimg %}
@@ -36,7 +41,7 @@
 		  {% endif %}
 		  
 		  {% if include.type == "post" %}
-		  <span class="post-meta">Posted on {{ page.date | date: "%B %-d, %Y" }}</span>
+		  <span class="post-meta">Posted on {{ page.date | date: "%B %-d, %Y" }} by <a href="/authors">{{author.name}}</a></span>
 		  {% endif %}
         </div>
       </div>
@@ -61,7 +66,7 @@
 		  {% endif %}
 		  
 		  {% if include.type == "post" %}
-		  <span class="post-meta">Posted on {{ page.date | date: "%B %-d, %Y" }}</span>
+		  <span class="post-meta">Posted on {{ page.date | date: "%B %-d, %Y" }} by <a href="/authors">{{author.name}}</a></span>
 		  {% endif %}
         </div>
       </div>
