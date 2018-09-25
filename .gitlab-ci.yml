@@ -1,0 +1,27 @@
+# .gitlab-ci.yml
+
+image: pragmasoftpl/tech-blog
+
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  script:
+    - jekyll build
+  artifacts:
+    paths:
+    - _site
+    expire_in: 1 month
+  when: manual
+  allow_failure: false
+
+deploy:
+  variables:
+    GIT_STRATEGY: none
+  stage: deploy
+  before_script:
+    - apk add --no-cache ncftp
+  script:
+    - ncftpput -R -u $FTP_USER -p $FTP_PASSWORD -m $FTP_URL /tech-blog .

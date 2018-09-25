@@ -3,7 +3,7 @@
 # url is the full website URL
 # baseurl is the website's URL without the hostname
 
-url: "http://pragmasoft-pl.github.io"
+url: "https://blog.pragmasoft.pl"
 baseurl: ""
 
 title: Pragmasoft Blog
@@ -96,7 +96,7 @@ share-links-active:
 
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "pragmasoft.pl"
+url-pretty: "blog.pragmasoft.pl"
 
 # --- Web Statistics Section --- #
 
@@ -145,7 +145,7 @@ title-separator: "-"
 timezone: "Europe/Warsaw"
 markdown: kramdown
 highlighter: rouge
-permalink: /:year-:month-:day-:title/
+permalink: /:categories/:year-:month-:day-:title/
 paginate: 5
 
 kramdown:
