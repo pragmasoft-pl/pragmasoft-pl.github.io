@@ -4,9 +4,10 @@ image: pragmasoftpl/tech-blog
 
 stages:
   - build
-  - deploy
+  - deploy-test
+  - deploy-prod
 
-build:
+.building:
   stage: build
   script:
     - jekyll build
@@ -14,14 +15,40 @@ build:
     paths:
     - _site
     expire_in: 1 month
+
+build:
+  extends: .building
+  only: 
+  - master
+
+build ad-hoc:
+  extends: .building
   when: manual
   allow_failure: false
+  except:
+  - master
 
-deploy:
+deploy test:
   variables:
     GIT_STRATEGY: none
-  stage: deploy
+  stage: deploy-test
+  environment:
+    name: internal-test
+    url: http://blog.pragmasoft.loc
   before_script:
     - apk add --no-cache ncftp
   script:
     - ncftpput -R -u $FTP_USER -p $FTP_PASSWORD -m $FTP_URL /tech-blog .
+
+deploy production:
+  variables:
+    GIT_STRATEGY: none
+  stage: deploy-prod
+  dependencies: []
+  environment:
+    name: production
+    url: https://blog.pragmasoft.pl
+  script:
+    echo "Deploying to production... completed!"
+  only:
+  - master
