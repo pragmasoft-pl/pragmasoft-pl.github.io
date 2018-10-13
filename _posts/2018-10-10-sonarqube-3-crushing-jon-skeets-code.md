@@ -9,7 +9,7 @@ tags: [software, SonarQube, "clean code", "technical debt" ]
 
 In [the previous article][prev] we managed to setup a SonarQube server, configured .NET projects and ran the analysis. Now it's time to look at the results. This will help us get familiar with SonarQube visualizations and capabilities.
 
-*Note! Code taken for the analysis is a snapshot of [Jon's Skeet's repository][gh-repo]. At the time of reading this it may got changed. It doesn't diminish the benefits though as SonarQube features are stable over time. So is code by Jon Skeet.*
+*Note! Code taken for analysis is a snapshot of [Jon's Skeet's repository][gh-repo]. At the time of reading this it may got changed. It doesn't diminish the benefits though as SonarQube features are stable over time. So is code by Jon Skeet.*
 
 *Note! All analysis results are available for public access [here][cloud-results] under my SonarCloud account. It's a great opportunity to play around with SonarQube with real data.*
 
@@ -60,10 +60,10 @@ How do Jon's projects perform here? Quite well. Lots of small projects well cove
 
 This was the last perspective described here. I presented only a subset of options available. At the time of writing the full selection also includes: reliability, security and duplications. All results are available [here][cloud-results], so you may play around yourself. Good time exploring!
 
-In the next article we focus on detailed analysis of a single project. We define rules, profiles, gates, project lifecycle, administration and more...
+In [the next article][next] we focus on detailed analysis of a single project. We define rules, profiles, gates, project lifecycle, administration and more...
 
 [prev]:     /software/2018-10-10-sonarqube-2-setup-environment "SonarQube #2 - Installation of SonarQube server and project configuration."
-[next]:     /software/2018-10-10-sonarqube-4-project-details "SonarQube #4 - A detailed look at single project analysis" 
+[next]:     /software/2018-10-24-sonarqube-4-project-analysis-details "SonarQube #4 - A detailed look at single project analysis" 
 
 [cloud-results]:            https://sonarcloud.io/organizations/wachulski-github/projects "Analysis results uploaded to SonarCloud.io - available to play around with"
 [gh-repo]:                  https://github.com/GoogleCloudPlatform/google-cloud-dotnet.git "Google Cloud Platform .NET libraries by Jon Skeet"
