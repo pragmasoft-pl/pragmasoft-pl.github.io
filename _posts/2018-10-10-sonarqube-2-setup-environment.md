@@ -141,7 +141,7 @@ This article explained how to install and configure your first SonarQube analysi
 [The next one][next-results] elaborates on the results of that analysis. It answers the question whether Jon Skeet writes good quality code or not (joke! Of course not, it's rather about various attributes of his style of coding we all can learn from).
 
 [prev-intro]:   /software/2018-10-10-sonarqube-1-intro   "SonarQube #1 - Introduction"
-[next-results]: /software/2018-10-10-sonarqube-3-jon-skeets-libs-analysis-results "SonarQube #3 - Analysis results of Jon Skeet's libraries"
+[next-results]: /software/2018-10-10-sonarqube-3-crushing-jon-skeets-code "SonarQube #3 - Analysis results of Jon Skeet's libraries"
 
 [sq-doc]:       https://docs.sonarqube.org/display/SONAR/Documentation "SonarQube documentation. In particular - installation and configuration manuals."
 [sq-downloads]: https://www.sonarqube.org/downloads/ "SonarQube downloads" 
